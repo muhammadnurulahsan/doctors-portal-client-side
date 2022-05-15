@@ -31,12 +31,7 @@ async function main() {
       res.send(services);
     });
 
-    // app.get("/services", async (req, res) => {
-    //   const query = {};
-    //   const cursor = servicesCollection.find(query);
-    //   const services = await cursor.toArray();
-    //   res.send(services);
-    // });
+    
   } finally {
     // await client.close();
   }
@@ -51,3 +46,10 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+// app.get("/services", async (req, res) => {
+    //   const query = {};
+    //   const cursor = servicesCollection.find(query);
+    //   const services = await cursor.toArray();
+    //   res.send(services);
+    // });
