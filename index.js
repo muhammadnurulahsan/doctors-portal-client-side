@@ -29,6 +29,8 @@ async function main() {
       res.send(services);
     });
 
+
+
     // app.get("/services", async (req, res) => {
     //   const query = {};
     //   const cursor = servicesCollection.find(query);
@@ -36,6 +38,8 @@ async function main() {
     //   res.send(services);
     // });
 
+
+    
   } 
   finally {
     // await client.close();
