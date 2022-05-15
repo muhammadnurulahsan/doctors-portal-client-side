@@ -21,7 +21,9 @@ async function main() {
   try {
     await client.connect();
     console.log("Connected to MongoDB");
-    const servicesCollection = client.db("doctors-portal").collection("services");
+    const servicesCollection = client
+      .db("doctors-portal")
+      .collection("services");
 
     app.get("/services", async (req, res) => {
       const query = {};
@@ -29,19 +31,13 @@ async function main() {
       res.send(services);
     });
 
-
-
     // app.get("/services", async (req, res) => {
     //   const query = {};
     //   const cursor = servicesCollection.find(query);
     //   const services = await cursor.toArray();
     //   res.send(services);
     // });
-
-
-    
-  } 
-  finally {
+  } finally {
     // await client.close();
   }
 }
